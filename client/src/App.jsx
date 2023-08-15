@@ -1,24 +1,17 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import React from 'react'
+import Navbar from './components/Navbar'
+import Content from './components/Content'
+import Footer from './components/Footer'
+import './App.css'
 
-function App() {
-  const [data, setData] = React.useState(null);
-
-  React.useEffect(() => {
-    fetch("/api")
-      .then((res) => res.json())
-      .then((data) => setData(data.message));
-  }, []);
-
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>{!data ? "Loading..." : data}</p>
-      </header>
-    </div>
-  );
+    <>
+    <Navbar />
+    <Content/>
+    <Footer />
+    </>
+  )
 }
 
-export default App;
+export default App
