@@ -6,7 +6,7 @@ function Content() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3000/api/product")
+    axios.get("http://localhost:5000/api/product")
       .then((response) => {
         setData(response.data);
       })
@@ -62,7 +62,7 @@ function Content() {
                 </div>
                 <div className="item">
                   <ul>
-                    {/* <li><img src="" alt="" className="templatemo-item" /></li> */}
+                     <li><img src="https://imgs.search.brave.com/-Y1wrsTAOxqr8BKgosAtnMg8Z7t2sRYDdIqVwG4dChA/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXIuZG9nL2xh/cmdlLzEwNzAwMTA2/LmpwZw" alt="" className="templatemo-item" /></li> 
                     <li><h4>Dota 2</h4><span>Sandbox</span></li>
                     <li><h4>Date Added</h4><span>24/08/2036</span></li>
                     <li><h4>Hours Played</h4><span>634 H 22 Mins</span></li>
@@ -86,3 +86,4 @@ function Content() {
 }
 
 export default Content;
+
