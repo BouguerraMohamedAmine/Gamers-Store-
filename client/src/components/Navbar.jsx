@@ -34,6 +34,7 @@ const Navbar = ({ products, addToCart }) => {
 
   return (
     <>
+
       <header className="header-area header-sticky">
         <div className="container">
           <div className="row">
@@ -42,7 +43,19 @@ const Navbar = ({ products, addToCart }) => {
                 <a href="index.html" className="logo">
                   <img src={logo} alt="" />
                 </a>
-                {/* Use the SearchBar component */}
+                <div className="search-input">
+                <form id="search" action="#">
+                  <input
+                    type="text"
+                    placeholder="Type Something"
+                    id="searchText"
+                    name="searchKeyword"
+                    value={searchTerm}
+                    onChange={handleSearch}
+                  />
+                  <i className="fa fa-search"></i>
+                </form>
+              </div>                
                 <ul className="nav">
                   <li><a href="index.html" className="active">Home</a></li>
                   <li><a href="">Browse</a></li>
