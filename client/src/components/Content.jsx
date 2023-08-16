@@ -4,7 +4,7 @@ import axios from 'axios';
 
 function Content() {
   const [data, setData] = useState([]);
-
+  
   useEffect(() => {
     axios.get("http://localhost:5000/api/product")
       .then((response) => {
@@ -14,6 +14,19 @@ function Content() {
         console.log(error);
       });
   }, []);
+
+  const handleDelete = async (itemId) => {
+    try {
+      await axios.delete(`http://localhost:5000/api/items/${itemId}`);
+      fetchData();
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+
+
+
 
   return (
     <div className="container">
